@@ -18,6 +18,11 @@ var JobApi = {
         return response;
 
     },
+
+    async storeNewJob(formData) {
+        var response = await axios.post(`${Data.url}/admin/job/store`, formData)
+        return response.data
+    },
 }
 
 export default JobApi;
