@@ -19,7 +19,7 @@
                   <!-- small box -->
                   <div :class='"small-box bg-red"'>
                       <div class="inner">
-                          <h3>{{ adminCardMetadata['data'] }}</h3>
+                          <h3>{{ adminCardMetadata['jobs']}}</h3>
 
                           <p>Total Jobs</p>
                       </div>
@@ -33,7 +33,7 @@
                   <!-- small box -->
                   <div :class='"small-box bg-blue"'>
                       <div class="inner">
-                          <h3>{{ adminCardMetadata['data'] }}</h3>
+                          <h3>{{ adminCardMetadata['activeJobs'] }}</h3>
 
                           <p>Active Jobs</p>
                       </div>

@@ -5,7 +5,7 @@ var MetaDataApi = {
     async adminCardMetadata() {
         var response = await axios.get(`${Data.url}/admin/metadata`);
 
-        return response;
+        return response.data;
     },
 }
 export default MetaDataApi;
