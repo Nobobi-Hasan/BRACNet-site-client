@@ -23,6 +23,16 @@ var JobApi = {
         var response = await axios.post(`${Data.url}/admin/job/store`, formData)
         return response.data
     },
+
+    async getJob(jobId) {
+        var response = await axios.get(`${Data.url}/admin/job/${jobId}`)
+        return response.data
+    },
+    
+    async updateJob(formData, jobId) {
+        var response = await axios.put(`${Data.url}/admin/job/update/${jobId}`, formData)
+        return response.data
+    },
 }
 
 export default JobApi;

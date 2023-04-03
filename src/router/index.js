@@ -2,6 +2,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import LoginView from '../views/LoginView.vue'
 import Dashboard from '../views/Dashboard.vue'
+import JobForm from '../views/JobForm.vue'
+import JobUpdate from '../views/JobUpdate.vue'
 
 import AccountService from '../Services/Account/AccountService';
 
@@ -34,6 +36,33 @@ const router = createRouter({
         }
       }
     },
+
+    {
+      path: "/job-add",
+      name: "JobAdd",
+      component: JobForm,
+      beforeEnter: (to, from, next) => {
+        if (AccountService.isAuthenticated()) {
+          next();
+        } else {
+          next({ name: 'Login' })
+        }
+      }
+    },
+
+    {
+      path: "/job-update/:id",
+      name: "JobUpdate",
+      component: JobUpdate,
+      beforeEnter: (to, from, next) => {
+        if (AccountService.isAuthenticated()) {
+          next();
+        } else {
+          next({ name: 'Login' })
+        }
+      }
+    },
+
 
 
 

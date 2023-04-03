@@ -19,7 +19,7 @@
                   <!-- small box -->
                   <div :class='"small-box bg-red"'>
                       <div class="inner">
-                          <h3>11</h3>
+                          <h3>{{ adminCardMetadata['data'] }}</h3>
 
                           <p>Total Jobs</p>
                       </div>
@@ -33,7 +33,7 @@
                   <!-- small box -->
                   <div :class='"small-box bg-blue"'>
                       <div class="inner">
-                          <h3>7</h3>
+                          <h3>{{ adminCardMetadata['data'] }}</h3>
 
                           <p>Active Jobs</p>
                       </div>
@@ -85,17 +85,14 @@
                         <td>{{ item.id }}</td>
                         <td>{{ item.title }}</td>
                         <td>{{ item.application_deadline }}</td>
-                        <!-- <td>1</td>
-                        <td>Title</td>
-                        <td>04-04-2023</td> -->
                         <td>
                           <div class="btn-group btn-group-sm">
-                            <!-- <router-link :to="{
-                                name: 'Job Details',
+                            <router-link :to="{
+                                name: 'JobUpdate',
                                 params: { id: item.id },
                               }" class="btn btn-info">
-                              <i class="fas fa-eye"></i>
-                            </router-link> -->
+                              <i class="fas fa-edit"></i>
+                            </router-link>
 
                             <button class="btn btn-danger" @click="deactivateJob(item.id)">
                               <i class="fas fa-trash"></i>
@@ -121,15 +118,18 @@
   
   <script>
   import JobService from '../Services/Job/JobService';
+  import adminCardMetadata from '../Services/Metadata/MetadataService';
 
   export default {
     components: {  },
     data() {
       return {
+        adminCardMetadata: {},
         jobList: []
       }
     },
     async mounted() {
+      this.adminCardMetadata = await adminCardMetadata.adminCardMetadata()
       this.jobList = await JobService.getAllJobs()
 
     },

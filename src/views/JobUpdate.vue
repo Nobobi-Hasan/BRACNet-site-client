@@ -2,7 +2,7 @@
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
-        <ContentHeader title="Add new job" />
+        <ContentHeader title="Update job" />
         <!-- /.content-header -->
 
         <!-- Main content -->
@@ -100,7 +100,7 @@
 
                                         
                                         <div class="d-flex justify-content-end">
-                                            <button class="btn btn-primary" type="submit">Submit</button>
+                                            <button class="btn btn-warning" type="submit">Update</button>
                                         </div>
 
                                     </div>
@@ -136,13 +136,11 @@ export default {
         }
     },
     async mounted() {
-
-        this.jobModel = await jobService.getJob(this.$route.params.id)
-
+        this.jobModel = await JobService.getJob(this.$route.params.id)
     },
     methods: {
         async handleForm() {
-            let response = await JobService.storeNewJob(this.jobModel)
+            let response = await JobService.updateJob(this.jobModel, this.$route.params.id)
             if (response.success) {
                 toastr.success(response.message)
 

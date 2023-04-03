@@ -23,7 +23,7 @@
             </router-link>
           </li>
           <li class="nav-item">
-            <router-link :to="{ name: 'Home' }" class="nav-link">
+            <router-link :to="{ name: 'JobAdd' }" class="nav-link">
               <i class="nav-icon fas fa-plus mr-2"></i>
               <p>Add Job</p>
             </router-link>
