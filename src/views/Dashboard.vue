@@ -86,7 +86,27 @@
                         <td>{{ item.title }}</td>
                         <td>{{ item.application_deadline }}</td>
                         <td>
-                          <div class="btn-group btn-group-sm">
+
+                          <!-- Example single danger button -->
+                          <div class="btn-group dropright">
+                            <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Action
+                            </button>
+                            <div class="dropdown-menu">
+                              <router-link :to="{
+                                  name: 'JobUpdate',
+                                  params: { id: item.id },
+                                }">
+                                <a class="dropdown-item" href="#"><i class="fas fa-edit"></i> Edit</a>
+                              </router-link>
+
+                              <a @click="deactivateJob(item.id)" class="dropdown-item" href="#"><i class="fas fa-trash"></i>Delete</a>
+
+                              <!-- <a class="dropdown-item" href="#">Separated link</a> -->
+                            </div>
+                          </div>
+
+                          <!-- <div class="btn-group btn-group-sm">
                             <router-link :to="{
                                 name: 'JobUpdate',
                                 params: { id: item.id },
@@ -97,7 +117,8 @@
                             <button class="btn btn-danger" @click="deactivateJob(item.id)">
                               <i class="fas fa-trash"></i>
                             </button>
-                          </div>
+                          </div> -->
+
                         </td>
                       </tr>
                     </tbody>

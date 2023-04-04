@@ -37,7 +37,7 @@
                       
 
                       <!-- remenber me and forgot pass btn -->
-                      <!-- <div class="row mt-3">
+                      <div class="row mt-3">
                           <div class="col-12 forgot-pass">
                               <div class="text-right">
                                   <p class="mb-1">
@@ -47,7 +47,7 @@
                                   </p>
                               </div>
                           </div>
-                      </div> -->
+                      </div>
                       <!-- remenber me and forgot pass btn -->
                   </form>
                   <hr>

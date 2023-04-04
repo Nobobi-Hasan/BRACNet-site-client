@@ -1,7 +1,8 @@
 export default class JobModel{
-    constructor(title, vacancy, job_responsibilities, employment_status, workplace, educational_requirements, experience_requirements, additional_requirements, job_location, salary, compensation_and_other_benefits, gender, application_deadline ){
+    constructor(title, vacancy, job_context, job_responsibilities, employment_status, workplace, educational_requirements, experience_requirements, additional_requirements, job_location, salary, compensation_and_other_benefits, gender, application_deadline ){
         this.title = title;
         this.vacancy = vacancy;
+        this.job_context = job_context;
         this.job_responsibilities = job_responsibilities;
         this.employment_status = employment_status;
         this.workplace = workplace;

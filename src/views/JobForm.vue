@@ -28,22 +28,47 @@
                                         </div>
 
                                         <div class="form-group">
+                                            <label for="job_context">Job Context</label>
+                                            <ckeditor :editor="editor" v-model="jobModel.job_context"
+                                                :config="editorConfig" required>
+                                            </ckeditor>
+                                        </div>
+                                        
+                                        <div class="form-group">
                                             <label for="job_responsibilities">Job Responsibilities</label>
                                             <ckeditor :editor="editor" v-model="jobModel.job_responsibilities"
                                                 :config="editorConfig" required>
                                             </ckeditor>
                                         </div>
 
-                                        <div class="form-group">
+                                        <!-- <div class="form-group">
                                             <label for="employment_status">Employment Status</label>
                                             <input type="text" class="form-control" id="employment_status"
                                                 v-model="jobModel.employment_status" required />
-                                        </div>
-                                        
+                                        </div> -->
+
                                         <div class="form-group">
+                                            <label for="employment_status">Employment Status</label>
+                                            <select class="form-control" id="employment_status"
+                                                v-model="jobModel.employment_status" required>
+                                                <option>Full-time</option>
+                                                <option>Part-time</option>
+                                            </select>
+                                        </div>
+
+                                        <!-- <div class="form-group">
                                             <label for="workplace">Workplace</label>
                                             <input type="text" class="form-control" id="workplace"
                                                 v-model="jobModel.workplace" required />
+                                        </div> -->
+
+                                        <div class="form-group">
+                                            <label for="workplace">Workplace</label>
+                                            <select class="form-control" id="workplace"
+                                                v-model="jobModel.workplace" required>
+                                                <option>Work at Office</option>
+                                                <option>Work from Home</option>
+                                            </select>
                                         </div>
 
                                         <div class="form-group">
@@ -67,11 +92,23 @@
                                             </ckeditor>
                                         </div> 
 
-                                        <div class="form-group">
+                                        <!-- <div class="form-group">
                                             <label for="job_location">Job Location</label>
                                             <input type="text" class="form-control" id="job_location"
                                                 v-model="jobModel.job_location" required />
-                                        </div> 
+                                        </div>  -->
+
+                                        <div class="form-group">
+                                            <label for="job_location">Job Location</label>
+                                            <select class="form-control" id="job_location"
+                                                v-model="jobModel.job_location" required>
+                                                <option>Dhaka (Corporate Office)</option>
+                                                <option>Chattagram Office</option>
+                                                <option>Sylhet Office</option>
+                                                <option>Khulna Office</option>
+                                                <option>Rajshahi Office</option>
+                                            </select>
+                                        </div>
 
                                         <div class="form-group">
                                             <label for="salary">Salary</label>
@@ -86,11 +123,21 @@
                                             </ckeditor>
                                         </div>
 
-                                        <div class="form-group">
+                                        <!-- <div class="form-group">
                                             <label for="gender">Gender</label>
                                             <input type="text" class="form-control" id="gender"
                                                 v-model="jobModel.gender" required />
-                                        </div> 
+                                        </div>  -->
+
+                                        <div class="form-group">
+                                            <label for="gender">Gender</label>
+                                            <select class="form-control" id="gender"
+                                                v-model="jobModel.gender" required>
+                                                <option>Only males are allowed</option>
+                                                <option>Only females are allowed</option>
+                                                <option>Both males and females are allowed</option>
+                                            </select>
+                                        </div>
 
                                         <div class="form-group">
                                             <label for="application_deadline">Application Deadline</label>
