@@ -47,7 +47,7 @@
                   <!-- small box -->
                   <div :class='"small-box bg-green"'>
                       <div class="inner">
-                          <h3>103</h3>
+                          <h3>{{ adminCardMetadata['views'] }}</h3>
 
                           <p>Jobs Views</p>
                       </div>

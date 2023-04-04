@@ -34,6 +34,7 @@
                           <!-- /.col -->
                       </div>
                       <!-- submit btn -->
+                      
 
                       <!-- remenber me and forgot pass btn -->
                       <!-- <div class="row mt-3">
@@ -97,3 +98,5 @@ export default {
   text-align: right;
 }
 </style>
+
+
