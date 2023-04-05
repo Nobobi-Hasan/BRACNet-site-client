@@ -74,12 +74,12 @@ export default {
   methods: {
       async handleForm() {
           let response = await AccountService.validateUserLogin(this.loginModel)
-          if (response.success) {
+          if (response?.success) {
               AccountService.saveUserDetailsToLocalStorage(response)
-              toastr.success(response.message)
+              toastr.success(response?.message)
               this.router.push({ name: 'Home' })
           } else {
-              toastr.error(response.message)
+              toastr.error(response?.message)
           }
       }
   },

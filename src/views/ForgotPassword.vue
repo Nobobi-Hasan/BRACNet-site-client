@@ -63,8 +63,12 @@ export default {
     methods: {
         async handleForm() {
             let response = await AccountService.sendEmailToUser(this.forgotPasswordModel)
-            if (response.success) {
-                toastr.success(response.message)
+            console.log(response)
+            if (response?.success == false) {
+                toastr.warning(response.message)
+            }
+            if (response?.result == true) {
+                toastr.success('We have set you an email with reset link.')
                 this.router.push({ name: 'Login' })
             }
         }

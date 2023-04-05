@@ -17,9 +17,9 @@
               <!-- Info card Start -->
                 <div class="col-md-4">
                   <!-- small box -->
-                  <div :class='"small-box bg-red"'>
+                  <div :class='"small-box bg-red overflow-hidden"'>
                       <div class="inner">
-                          <h3>{{ adminCardMetadata['jobs']}}</h3>
+                          <h3 :class= hasValue >{{ adminCardMetadata['jobs'] }}</h3>
 
                           <p>Total Jobs</p>
                       </div>
@@ -31,9 +31,9 @@
 
                 <div class="col-md-4">
                   <!-- small box -->
-                  <div :class='"small-box bg-blue"'>
+                  <div :class='"small-box bg-blue overflow-hidden"'>
                       <div class="inner">
-                          <h3>{{ adminCardMetadata['activeJobs'] }}</h3>
+                          <h3 :class= hasValue >{{ adminCardMetadata['activeJobs'] }}</h3>
 
                           <p>Active Jobs</p>
                       </div>
@@ -45,9 +45,9 @@
 
                 <div class="col-md-4">
                   <!-- small box -->
-                  <div :class='"small-box bg-green"'>
+                  <div :class='"small-box bg-green overflow-hidden"'>
                       <div class="inner">
-                          <h3>{{ adminCardMetadata['views'] }}</h3>
+                          <h3 :class= hasValue >{{ adminCardMetadata['views'] }}</h3>
 
                           <p>Jobs Views</p>
                       </div>
@@ -145,12 +145,18 @@
     components: {  },
     data() {
       return {
-        adminCardMetadata: {},
-        jobList: []
+        adminCardMetadata: {"jobs": "Loading",
+                            "activeJobs": "Loading",
+                            "views": "Loading"},
+        jobList: [],
+        // hasValue: "opacity-50"
+        hasValue: "text-white-50"
       }
     },
     async mounted() {
       this.adminCardMetadata = await adminCardMetadata.adminCardMetadata()
+      // this.hasValue ="opacity-100"
+      this.hasValue ="text-light"
       this.jobList = await JobService.getAllJobs()
 
     },

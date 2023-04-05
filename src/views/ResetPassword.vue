@@ -23,7 +23,7 @@
 
                         <div class="form-group">
                             <label for="otp">OTP</label>
-                            <input type="number" id="otp" class="form-control" required
+                            <input type="text" id="otp" class="form-control" required maxlength=6 minlength=6
                                 v-model="resetPasswordModel.otp">
                             <span class="form-text small text-muted"> </span>
                         </div>
