@@ -21,13 +21,15 @@
             style="width: 33px; cursor: pointer" />
         </span>
         <div class="dropdown-menu dropdown-menu-md dropdown-menu-right">
-          <router-link class="dropdown-item" :to="{ name: profile }">
+          <!-- <router-link class="dropdown-item" :to="{ name: profile }">
             <i class="fas fa-envelope mr-2"></i> Profile
-          </router-link>
-          <!-- <div class="dropdown-divider"></div>
-          <router-link class="dropdown-item" :to="{ name: 'Change Password' }">
-            <i class="fas fa-key mr-2"></i> Change Password
           </router-link> -->
+
+          <!-- <div class="dropdown-item"></div> -->
+          <router-link class="dropdown-item" :to="{ name: 'ChangePassword' }">
+            <i class="fas fa-key mr-2"></i> Change Password
+          </router-link>
+          
           <div class="dropdown-divider"></div>
           <span @click="logout()" class="dropdown-item" style="cursor: pointer">
             <i class="fas fa-sign-out-alt mr-2"></i> Logout

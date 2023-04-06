@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import LoginView from '../views/LoginView.vue'
 import ForgotPassword from '../views/ForgotPassword.vue'
 import ResetPassword from '../views/ResetPassword.vue'
+import ChangePassword from '../views/ChangePassword.vue'
 import Dashboard from '../views/Dashboard.vue'
 import JobForm from '../views/JobForm.vue'
 import JobUpdate from '../views/JobUpdate.vue'
@@ -39,6 +40,8 @@ const router = createRouter({
       }
     },
 
+    
+
     {
       path: "/reset-password",
       name: "Reset Password",
@@ -48,6 +51,19 @@ const router = createRouter({
           next();
         } else {
           next({ name: 'Home' })
+        }
+      }
+    },
+
+    {
+      path: '/change-password',
+      name: 'ChangePassword',
+      component: ChangePassword,
+      beforeEnter: (to, from, next) => {
+        if (AccountService.isAuthenticated()) {
+          next();
+        } else {
+          next({ name: 'Login' })
         }
       }
     },

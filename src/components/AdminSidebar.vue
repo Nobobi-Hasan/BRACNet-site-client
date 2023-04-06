@@ -3,9 +3,9 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <span class="brand-link">
-      <img src="/assets/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+      <img src="/assets/dist/img/BracnetLogo.png" alt="BracnetLogo" class="brand-image img-circle elevation-3"
         style="opacity: 0.8" />
-      <span class="brand-text font-weight-light">BRACNet</span>
+      <span class="brand-text font-weight-bold">BRACNet</span>
     </span>
 
     <!-- Sidebar -->

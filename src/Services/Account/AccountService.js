@@ -2,6 +2,7 @@ import LoginApi from "../../API/Account/LoginApi"
 import LogoutApi from "../../API/Account/LogoutApi"
 import ForgotPasswordApi from "../../API/Account/ForgotPasswordApi"
 import ResetPasswordApi from "../../API/Account/ResetPasswordApi"
+import ChangePasswordApi from "../../API/Account/ChangePasswordApi"
 
 export default {
 
@@ -12,6 +13,8 @@ export default {
     sendEmailToUser: formData => ForgotPasswordApi.sendEmailToUser(formData),
 
     resetPasswordOnNewAccount: formData => ResetPasswordApi.resetPasswordOnNewAccount(formData),
+
+    changePassword: (formData) => ChangePasswordApi.changePassword(formData),
 
     logout: () => LogoutApi.logout(),
 
