@@ -10,5 +10,14 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
+  },
+  build: {
+    outDir: '../site-api/public/',  //directory of output location where the dist file will be compiled
+    rollupOptions: {
+      output: {
+        entryFileNames: 'assets/main.js',
+        assetFileNames: 'assets/index.css',
+      }
+    }
   }
 })

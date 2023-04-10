@@ -139,7 +139,7 @@
   
   <script>
   import JobService from '../Services/Job/JobService';
-  import adminCardMetadata from '../Services/Metadata/MetadataService';
+  import adminCardMetadata from '../Services/MetaData/MetaDataService';
 
   export default {
     components: {  },
