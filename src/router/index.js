@@ -11,7 +11,8 @@ import JobUpdate from '../views/JobUpdate.vue'
 import AccountService from '../Services/Account/AccountService';
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  // history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(),
   routes: [
 
     {
