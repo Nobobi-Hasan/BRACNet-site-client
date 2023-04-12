@@ -184,7 +184,7 @@ export default {
     },
     async mounted() {
 
-        this.jobModel = await jobService.getJob(this.$route.params.id)
+        this.jobModel = await JobService.getJob(this.$route.params.id)
 
     },
     methods: {
