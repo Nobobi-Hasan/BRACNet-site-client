@@ -20,6 +20,14 @@
                                             <input type="text" class="form-control" id="title"
                                                 v-model="jobModel.title" required />
                                         </div>
+                                        
+                                        <label for="age_from">Age</label>
+                                        <div class="input-group mt-n3 mb-4">
+                                            <span class="input-group-text">From</span>
+                                            <input type="number" class="form-control"  id="age_from" v-model="jobModel.age_from">
+                                            <span class="input-group-text">To</span>
+                                            <input type="number" class="form-control"  id="age_to" v-model="jobModel.age_to">
+                                        </div>
 
                                         <div class="form-group">
                                             <label for="vacancy">Vacancy <span class="font-weight-normal text-sm">(Leave blank if not specified)</span></label>
@@ -40,12 +48,6 @@
                                                 :config="editorConfig" required>
                                             </ckeditor>
                                         </div>
-
-                                        <!-- <div class="form-group">
-                                            <label for="employment_status">Employment Status</label>
-                                            <input type="text" class="form-control" id="employment_status"
-                                                v-model="jobModel.employment_status" required />
-                                        </div> -->
 
                                         <!-- <div class="form-group">
                                             <label for="employment_status">Employment Status</label>
@@ -198,6 +200,12 @@
                                         </div>
 
 
+
+                                        <div class="form-group">
+                                            <label for="bdjobs_url">BD Jobs URL</label>
+                                            <input type="text" class="form-control" id="bdjobs_url"
+                                                v-model="jobModel.bdjobs_url" required />
+                                        </div>
 
                                         <div class="form-group">
                                             <label for="application_deadline">Application Deadline</label>

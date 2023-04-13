@@ -21,6 +21,14 @@
                                                 v-model="jobModel.title" required />
                                         </div>
 
+                                        <label for="age_from">Age</label>
+                                        <div class="input-group mt-n3 mb-4">
+                                            <span class="input-group-text">From</span>
+                                            <input type="number" class="form-control"  id="age_from" v-model="jobModel.age_from">
+                                            <span class="input-group-text">To</span>
+                                            <input type="number" class="form-control"  id="age_to" v-model="jobModel.age_to">
+                                        </div>
+
                                         <div class="form-group">
                                             <label for="vacancy">Vacancy <span class="font-weight-normal text-sm">(Leave blank if not specified)</span></label>
                                             <input type="number" class="form-control" id="vacancy"
@@ -185,6 +193,12 @@
                                             <label class="form-check-label" for="radio3">
                                                 <input type="radio" class="form-check-input" id="radio3" name="gender" value="Both males and females are allowed" v-model="jobModel.gender" selected="jobModel.workplace=='Both males and females are allowed'?'true':'false'">Both males and females are allowed
                                             </label>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="bdjobs_url">BD Jobs URL</label>
+                                            <input type="text" class="form-control" id="bdjobs_url"
+                                                v-model="jobModel.bdjobs_url" required />
                                         </div>
 
 
