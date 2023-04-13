@@ -22,9 +22,9 @@
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="vacancy">Vacancy</label>
+                                            <label for="vacancy">Vacancy <span class="font-weight-normal text-sm">(Leave blank if not specified)</span></label>
                                             <input type="number" class="form-control" id="vacancy"
-                                                v-model="jobModel.vacancy" required />
+                                                v-model="jobModel.vacancy" placeholder="Not specified"/>
                                         </div>
 
                                         <div class="form-group">
@@ -58,12 +58,14 @@
 
                                         <label for="employment_status">Employment Status</label>
                                         <div class="form-check mt-n4">
-                                            <input type="radio" class="form-check-input" id="employment_status1" name="employment_status" value="Full-time" v-model="jobModel.employment_status">Full-time
-                                            <label class="form-check-label" for="employment_status1"></label>
+                                            <label class="form-check-label" for="employment_status1">
+                                                <input type="radio" class="form-check-input" id="employment_status1" name="employment_status" value="Full-time" v-model="jobModel.employment_status">Full-time
+                                            </label>
                                         </div>
                                         <div class="form-check">
-                                            <input type="radio" class="form-check-input" id="employment_status2" name="employment_status" value="Part-time" v-model="jobModel.employment_status">Part-time
-                                            <label class="form-check-label" for="employment_status2"></label>
+                                            <label class="form-check-label" for="employment_status2">
+                                                <input type="radio" class="form-check-input" id="employment_status2" name="employment_status" value="Part-time" v-model="jobModel.employment_status">Part-time
+                                            </label>
                                         </div>
 
 
@@ -78,12 +80,14 @@
 
                                         <label for="workplace">Workplace</label>
                                         <div class="form-check mt-n4">
-                                            <input type="radio" class="form-check-input" id="workplace1" name="workplace" value="Work at Office" v-model="jobModel.workplace">Work at Office
-                                            <label class="form-check-label" for="workplace1"></label>
+                                            <label class="form-check-label" for="workplace1">
+                                                <input type="radio" class="form-check-input" id="workplace1" name="workplace" value="Work at Office" v-model="jobModel.workplace">Work at Office
+                                            </label>
                                         </div>
                                         <div class="form-check">
-                                            <input type="radio" class="form-check-input" id="workplace2" name="workplace" value="Work from Home" v-model="jobModel.workplace">Work from Home
-                                            <label class="form-check-label" for="workplace2"></label>
+                                            <label class="form-check-label" for="workplace2">
+                                                <input type="radio" class="form-check-input" id="workplace2" name="workplace" value="Work from Home" v-model="jobModel.workplace">Work from Home
+                                            </label>
                                         </div>
 
                                         <div class="form-group">
@@ -109,12 +113,6 @@
 
                                         <!-- <div class="form-group">
                                             <label for="job_location">Job Location</label>
-                                            <input type="text" class="form-control" id="job_location"
-                                                v-model="jobModel.job_location" required />
-                                        </div>  -->
-
-                                        <!-- <div class="form-group">
-                                            <label for="job_location">Job Location</label>
                                             <select class="form-control" id="job_location"
                                                 v-model="jobModel.job_location" required>
                                                 <option>Dhaka (Corporate Office)</option>
@@ -127,30 +125,39 @@
 
                                         <label for="job_location">Job Location</label>
                                         <div class="form-check mt-n4">
-                                            <input type="radio" class="form-check-input" id="job_location1" name="job_location" value="Dhaka (Corporate Office)" v-model="jobModel.job_location">Dhaka (Corporate Office)
-                                            <label class="form-check-label" for="job_location1"></label>
+                                            <label class="form-check-label" for="job_location1">
+                                                <input type="radio" class="form-check-input" id="job_location1" name="job_location" value="Dhaka (Corporate Office)" v-model="jobModel.job_location">Dhaka (Corporate Office)
+                                            </label>
                                         </div>
+
                                         <div class="form-check">
-                                            <input type="radio" class="form-check-input" id="job_location2" name="job_location" value="Chattagram Office" v-model="jobModel.job_location">Chattagram Office
-                                            <label class="form-check-label" for="job_location2"></label>
+                                            <label class="form-check-label" for="job_location2">
+                                                <input type="radio" class="form-check-input" id="job_location2" name="job_location" value="Chattagram Office" v-model="jobModel.job_location">Chattagram Office
+                                            </label>
                                         </div>
+
                                         <div class="form-check">
-                                            <input type="radio" class="form-check-input" id="job_location3" name="job_location" value="Sylhet Office" v-model="jobModel.job_location">Sylhet Office
-                                            <label class="form-check-label" for="job_location3"></label>
+                                            <label class="form-check-label" for="job_location3">
+                                                <input type="radio" class="form-check-input" id="job_location3" name="job_location" value="Sylhet Office" v-model="jobModel.job_location">Sylhet Office
+                                            </label>
                                         </div>
+
                                         <div class="form-check">
-                                            <input type="radio" class="form-check-input" id="job_location3" name="job_location" value="Khulna Office" v-model="jobModel.job_location">Khulna Office
-                                            <label class="form-check-label" for="job_location3"></label>
+                                            <label class="form-check-label" for="job_location4">
+                                                <input type="radio" class="form-check-input" id="job_location4" name="job_location" value="Khulna Office" v-model="jobModel.job_location">Khulna Office
+                                            </label>
                                         </div>
+
                                         <div class="form-check">
-                                            <input type="radio" class="form-check-input" id="job_location3" name="job_location" value="Rajshahi Office" v-model="jobModel.job_location">Rajshahi Office
-                                            <label class="form-check-label" for="job_location3"></label>
+                                            <label class="form-check-label" for="job_location5">
+                                                <input type="radio" class="form-check-input" id="job_location5" name="job_location" value="Rajshahi Office" v-model="jobModel.job_location">Rajshahi Office
+                                            </label>
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="salary">Salary</label>
+                                            <label for="salary">Salary <span class="font-weight-normal text-sm">(Leave blank if negotiable)</span></label>
                                             <input type="text" class="form-control" id="salary"
-                                                v-model="jobModel.salary" required />
+                                                v-model="jobModel.salary" placeholder="Negotiable"/>
                                         </div>
 
                                         <div class="form-group">
@@ -173,16 +180,21 @@
 
                                         <label for="gender">Gender</label>
                                         <div class="form-check mt-n4">
-                                            <input type="radio" class="form-check-input" id="radio1" name="gender" value="Only males are allowed" v-model="jobModel.gender">Only males are allowed
-                                            <label class="form-check-label" for="radio1"></label>
+                                            <label class="form-check-label" for="radio1">
+                                                <input type="radio" class="form-check-input" id="radio1" name="gender" value="Only males are allowed" v-model="jobModel.gender">Only males are allowed
+                                            </label>
                                         </div>
+
                                         <div class="form-check">
-                                            <input type="radio" class="form-check-input" id="radio2" name="gender" value="Only females are allowed" v-model="jobModel.gender">Only females are allowed
-                                            <label class="form-check-label" for="radio2"></label>
+                                            <label class="form-check-label" for="radio2">
+                                                <input type="radio" class="form-check-input" id="radio2" name="gender" value="Only females are allowed" v-model="jobModel.gender">Only females are allowed
+                                            </label>
                                         </div>
+
                                         <div class="form-check">
-                                            <input type="radio" class="form-check-input" id="radio2" name="gender" value="Both males and females are allowed" v-model="jobModel.gender">Both males and females are allowed
-                                            <label class="form-check-label" for="radio2"></label>
+                                            <label class="form-check-label" for="radio3">
+                                                <input type="radio" class="form-check-input" id="radio3" name="gender" value="Both males and females are allowed" v-model="jobModel.gender">Both males and females are allowed
+                                            </label>
                                         </div>
 
 
@@ -233,6 +245,17 @@ export default {
     async mounted() {
 
         this.jobModel = await JobService.getJob(this.$route.params.id)
+
+        var date = new Date();
+        date.setDate(date.getDate() + 15);
+        this.jobModel.application_deadline = date.toISOString().slice(0,10);
+
+        this.jobModel.employment_status = "Full-time";
+        this.jobModel.workplace = "Work at Office";
+        this.jobModel.job_location = "Dhaka (Corporate Office)";
+        this.jobModel.gender = "Both males and females are allowed";
+
+        this.jobModel.compensation_and_other_benefits = `<ul><li>T/A, Mobile bill, Profit share, Provident fund, Weekly 2 holidays, Insurance, Gratuity</li><li>Festival Bonus: 2</li></ul>`;
 
     },
     methods: {
